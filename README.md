@@ -6,7 +6,7 @@ Simple implementation of the cross browser tab communication using
 2. Broadcast Channel API
 3. Shared Worker
 
-More information: https://punn.dev/blog/cross-tab-communication
+More information: https://punn.dev/blog/how-to-implement-cross-tab-communication
 
 ## How to start
 
