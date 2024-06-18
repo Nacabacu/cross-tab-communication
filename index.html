@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross Tab Communication</title>
+</head>
+<body>
+  <div>Window ID: <span id="windowId"></span></div>
+  <div id="messageResult"></div>
+  <button id="newWindow"> New Window</button>
+  <button id="publishLocalStorage">Publish LocalStorage</button>
+  <button id="publishBroadcastChannel">Publish Broadcast Channel</button>
+  <button id="publishSharedWorker">Publish Shared Worker</button>
+
+  <script>
+    const windowId = Math.random().toString(36).substr(2, 9);
+    const messageResult = document.getElementById('messageResult');
+
+    document.getElementById('windowId').innerText = `${windowId}`;
+    document.getElementById('newWindow').addEventListener('click', () => {
+      window.open('index.html');
+    });
+  </script>
+  <script src="./src/localstorage.js"></script>
+  <script src="./src/broadcastChannel.js"></script>
+  <script src="./src/sharedWorker.js"></script>
+</body>
+</html>
